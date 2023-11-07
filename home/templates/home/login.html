@@ -1,0 +1,45 @@
+{% extends 'home/login_reg_base.html' %}
+{% block release %}
+<div class="card-body">
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<h3 id="form-title">Login</h3>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+					<form method="POST" action="">
+						{% csrf_token %}
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text" style="background-color:#1C1D21"><i class="fas fa-user"></i></span>
+							</div>
+							<input type="text" name="username" placeholder="Username" class="form-control">
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text" style="background-color:#1C1D21"><i class="fas fa-key"></i></span>
+							</div>
+								<input type="password" name="password" placeholder="Password" class="form-control" >
+						</div>
+
+							<div class="d-flex justify-content-center mt-3 login_container">
+				 				<input class="btn login_btn text-white" style="background-color:#1C1D21" type="submit" value="Login">
+				   			</div>
+					</form>
+				</div>
+				<br>
+				{% for message in messages %}
+				<p>{{ message }}</p>
+				{% endfor %}
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Don't have an account? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
