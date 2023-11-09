@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;800;900&display=swap");
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -72,7 +72,10 @@ footer {
     font-size: 1.15rem;
     color: #EFF1F3;
     text-decoration: none;
-    margin-left: 1.5rem;
+    text-align: center;
+    padding: 10px 10px;
+    margin-inline: 5px;
+    border-radius: 10px;
 }
 
 #check {
@@ -88,13 +91,17 @@ footer {
     display: none;
 }
 
-@media (max-width: 992px) {
+.navbar a:hover{
+    background-color: #2d2e35;
+}
+
+@media (max-width: 1000px) {
     .header {
         padding: 1rem 5%;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 960px) {
     .icon {
         display: inline-flex;
     }
@@ -123,7 +130,7 @@ footer {
     }
 
     #check:checked~.navbar{
-        height: 15rem;
+        height: 18rem;
     }
 
     .navbar a{
@@ -135,10 +142,14 @@ footer {
         transform: translateY(-50px);
         transition: .3s ease;
     }
-
+    
     #check:checked~.navbar a{
         opacity: 1;
         transform: translateY(0);
+    }
+
+    .navbar a:hover{
+        background-color: #1C1D21;
     }
 }
 
