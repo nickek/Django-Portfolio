@@ -1,49 +1,43 @@
 {% extends 'home/login_reg_base.html' %}
 {% block release %}
-<div class="card-body">
-	<div class="container h-100">
-		<div class="d-flex justify-content-center h-100">
-			<div class="user_card">
-				<div class="d-flex justify-content-center">
-					<h3 id="form-title">Register</h3>
-				</div>
-				<div class="d-flex justify-content-center form_container">
+<div class="user_card">
+	<div class="d-flex justify-content-center">
+		<h3 id="form-title">Register</h3>
+	</div>
+	<div class="d-flex justify-content-center form_container">
 
-					<form method="POST" action="">
-                        {% csrf_token %}
-						<div class="input-group">
-                            {{ form.username }}
-						</div>
-						<div class="input-group">
-							{{ form.email }}
-						</div>
-						<div class="input-group">
-							{{ form.first_name }}
-						</div>
-						<div class="input-group">
-							{{ form.last_name }}
-						</div>
-						<div class="input-group">
-							{{ form.password1 }}
-						</div>
-						<div class="input-group">
-							{{ form.password2 }}
-						</div>
-				   		<div class="d-flex justify-content-center mt-3 login_container">
-				 			<input class="btn register_btn" type="submit" value="Register Account">
-				   		</div>
-					</form>
-				</div>
-				<br>
-				<div class="'error-message">
-                	{{ form.errors }}
-				</div>
-				<div class="mt-4">
-					<div class="d-flex justify-content-center links">
-						Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
-					</div>
-				</div>
+		<form method="POST" action="">
+			{% csrf_token %}
+			<div class="input-group">
+				{{ form.username }}
 			</div>
+			<div class="input-group">
+				{{ form.email }}
+			</div>
+			<div class="input-group">
+				{{ form.first_name }}
+			</div>
+			<div class="input-group">
+				{{ form.last_name }}
+			</div>
+			<div class="input-group">
+				{{ form.password1 }}
+			</div>
+			<div class="input-group">
+				{{ form.password2 }}
+			</div>
+			<div class="d-flex justify-content-center mt-3 login_container">
+				<input class="btn register_btn" type="submit" value="Register Account">
+			</div>
+		</form>
+	</div>
+	<br>
+	<div class="'error-message">
+		{{ form.errors }}
+	</div>
+	<div class="mt-4">
+		<div class="d-flex justify-content-center links">
+			Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
 		</div>
 	</div>
 </div>

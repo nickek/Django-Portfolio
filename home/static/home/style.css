@@ -12,7 +12,6 @@ body {
     flex-direction: column;
     text-rendering: optimizeLegibility;
     background-color: #EFF1F3;
-    
 }
 
 header {
@@ -34,8 +33,6 @@ main {
     background-color: #EFF1F3;
     background-position: center;
     background-size: cover; 
-    justify-content: center;
-    text-align: center;
     z-index: 50;
 }
 
@@ -154,6 +151,13 @@ footer {
     margin-top: 10px;
     justify-content: left;
     margin-bottom: 10px;
+}
+
+.login_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .form-control{
