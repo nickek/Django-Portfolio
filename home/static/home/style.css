@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;800;900&display=swap");
 
+/* General settings */
 * {
     margin: 0;
     padding: 0;
@@ -7,11 +8,18 @@
     font-family: "Roboto", sans-serif;
 }
 
+:root {
+    --primary-color: #1C1D21;
+    --secondary-color: #2d2e35;
+    --white: #EFF1F3;
+    --yellow: #FDB813;
+}
+
 body {
     display: flex;
     flex-direction: column;
     text-rendering: optimizeLegibility;
-    background-color: #EFF1F3;
+    background-color: var(--white);
 }
 
 header {
@@ -19,7 +27,7 @@ header {
     position: fixed;
     width: 100%;
     padding: 1rem 2%;
-    background: #1C1D21;
+    background: var(--primary-color);
     justify-content: space-between;
     align-items: center;
     z-index: 100;
@@ -30,7 +38,7 @@ main {
     display: flex;
     padding: 1rem 5%;
 	height: auto;
-    background-color: #EFF1F3;
+    background-color: var(--white);
     background-position: center;
     background-size: cover; 
     z-index: 50;
@@ -42,14 +50,16 @@ footer {
     width: 100%;
     height: auto;
     padding: 10px 10px;
-    background-color: #1C1D21;
-    color:#EFF1F3;
+    background-color: var(--primary-color);
+    color:var(--white);
     text-align: center;
     position: absolute;
     bottom: 0;
     
 }
 
+
+/* Navbar settings */
 .logo {
     display: flex;
     align-items: center;
@@ -63,19 +73,20 @@ footer {
 
 .logo-text {
     font-size: 2rem;
-    color: #EFF1F3;
+    color: var(--white);
     text-decoration: none;
     font-weight: 500;
 }
 
 .navbar a {
     font-size: 1.15rem;
-    color: #EFF1F3;
+    color: var(--white);
     text-decoration: none;
     text-align: center;
     padding: 10px 10px;
     margin-inline: 5px;
     border-radius: 10px;
+    transition: .3s ease;
 }
 
 #check {
@@ -84,15 +95,16 @@ footer {
 
 .icon {
     position: absolute;
-    right: 5%;
+    right: 2%;
     font-size: 2rem;
-    color: #EFF1F3;
+    color: var(--white);
     cursor: pointer;
     display: none;
 }
 
 .navbar a:hover{
-    background-color: #2d2e35;
+    background-color: var(--secondary-color);
+    transition: .3s ease;
 }
 
 @media (max-width: 1000px) {
@@ -125,7 +137,7 @@ footer {
         width: 100%;
         height: 0;
         overflow: hidden;
-        background: #2d2e35;
+        background: var(--secondary-color);
         transition: .3s ease;
     }
 
@@ -149,11 +161,12 @@ footer {
     }
 
     .navbar a:hover{
-        background-color: #1C1D21;
+        background-color: var(--primary-color);
+        transition: .3s ease;
     }
 }
 
-/* login / register code */
+/* Login / register settings */
 #form-title {
     font-size: 2rem;
 }
@@ -181,31 +194,31 @@ footer {
 .login_btn {
     font-size: 1rem;
     border-radius: 10px;
-    background-color: #1C1D21;
-    color: #EFF1F3;
+    background-color: var(--primary-color);
+    color: var(--white);
     width: fit-content;
     padding: 5px 100px;
     transition: .3s ease;
 }
 
 .login_btn:hover {
-    background-color: #FDB813;
-    color: #1C1D21;
+    background-color: var(--yellow);
+    color: var(--primary-color);
     transition: .3s ease;
 }
 
 .register_btn {
     font-size: 1rem;
     border-radius: 10px;
-    background-color: #1C1D21;
-    color: #EFF1F3;
+    background-color: var(--primary-color);
+    color: var(--white);
     width: fit-content;
     padding: 5px 59px;
     transition: .3s ease;
 }
 
 .register_btn:hover {
-    background-color: #FDB813;
-    color: #1C1D21;
+    background-color: var(--yellow);
+    color: var(--primary-color);
     transition: .3s ease;
 }
