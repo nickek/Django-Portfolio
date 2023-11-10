@@ -8,6 +8,8 @@
         <p class="profile-text">{{ request.user.email}}</p>
         <p class="profile-label">Name</p>
         <p class="profile-text">{{ request.user.first_name }} {{ request.user.last_name }}</p>
+        <br>
+        <a href="{% url 'password_change' %}">Change password</a>
     </div>
 </div>
 {% endblock %}

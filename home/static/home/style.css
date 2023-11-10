@@ -178,6 +178,7 @@ footer {
 }
 
 .login_main{
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -222,3 +223,5 @@ footer {
     color: var(--primary-color);
     transition: .3s ease;
 }
+
+/* Password reset / change settings */

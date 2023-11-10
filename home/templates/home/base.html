@@ -29,10 +29,8 @@
             <a href="{% url 'logout' %}">Logout</a>
         </nav>
     </header>
-    <main>
-        {% block release %}
-        {% endblock %}
-    </main>
+    {% block release %}
+    {% endblock %}
     <footer>
       <p>random foot</p>
     </footer>
