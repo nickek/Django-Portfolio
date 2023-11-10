@@ -33,7 +33,11 @@
 	</div>
 	<br>
 	<div class="'error-message">
-		{{ form.errors }}
+		{% for field in form %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      {% endfor %}
 	</div>
 	<div class="mt-4">
 		<br>
