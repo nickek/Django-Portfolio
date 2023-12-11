@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <link rel="stylesheet" href="/static/user_profile/style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <title>Nick's Project</title>
+    <title>Nick's Portfolio</title>
   </head>
   <body>
     <header>
@@ -13,7 +13,7 @@
         <a class="logo-image">
             <img src="/static/logo.png" width="40" height="40">
         </a>
-        <a class="logo-text" href="#">Nick's Project</a>
+        <a class="logo-text" href="{% url 'home' %}">Nick's Portfolio</a>
         </div>
         <input type="checkbox" id="check">
         <label for="check" class="icon">
@@ -23,8 +23,9 @@
 
         <nav class="navbar">
             <a href="{% url 'home' %}">Home</a>
-            <a href="#">Explore</a>
-            <a href="#">Friends</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Experience</a>
             <a href="{% url 'profile' %}">Me</a>
             <a href="{% url 'logout' %}">Logout</a>
         </nav>
