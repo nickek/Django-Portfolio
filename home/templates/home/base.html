@@ -26,12 +26,15 @@
             <a href="#">About</a>
             <a href="#">Projects</a>
             <a href="#">Experience</a>
-            <a href="{% url 'profile' %}">Me</a>
-            <a href="{% url 'logout' %}">Logout</a>
+            <a href="#">Blog</a>
+            <!-- <a href="{% url 'profile' %}">Me</a>
+            <a href="{% url 'logout' %}">Logout</a> -->
         </nav>
     </header>
+    <main>
     {% block release %}
     {% endblock %}
+    </main>
     <footer>
       <p>random foot</p>
     </footer>

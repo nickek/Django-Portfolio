@@ -85,7 +85,7 @@ footer {
     text-align: center;
     padding: 10px 10px;
     margin-inline: 5px;
-    border-radius: 10px;
+    border-radius: 25px;
     transition: .3s ease;
 }
 
@@ -142,7 +142,7 @@ footer {
     }
 
     #check:checked~.navbar{
-        height: 18rem;
+        height: 25rem;
     }
 
     .navbar a{
@@ -224,4 +224,24 @@ footer {
     transition: .3s ease;
 }
 
-/* Password reset / change settings */
+/* Home settings */
+
+.home {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* border-bottom: 2px solid var(--primary-color); */
+}
+
+.home-item {
+    margin: 10px 10px;
+}
+
+.home-info {
+    margin-bottom: 5px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+}
